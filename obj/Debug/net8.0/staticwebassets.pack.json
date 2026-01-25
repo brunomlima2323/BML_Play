@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\BML_Play.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Bruno Lima\\source\\repos\\BML_Play\\wwwroot\\audio\\tudum.mp3",
+      "PackagePath": "staticwebassets\\audio\\tudum.mp3"
+    },
+    {
       "Id": "C:\\Users\\Bruno Lima\\source\\repos\\BML_Play\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

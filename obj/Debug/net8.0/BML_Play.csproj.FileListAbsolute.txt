@@ -28,3 +28,4 @@ C:\Users\Bruno Lima\source\repos\BML_Play\obj\Debug\net8.0\refint\BML_Play.dll
 C:\Users\Bruno Lima\source\repos\BML_Play\obj\Debug\net8.0\BML_Play.pdb
 C:\Users\Bruno Lima\source\repos\BML_Play\obj\Debug\net8.0\BML_Play.genruntimeconfig.cache
 C:\Users\Bruno Lima\source\repos\BML_Play\obj\Debug\net8.0\ref\BML_Play.dll
+C:\Users\Bruno Lima\source\repos\BML_Play\obj\Debug\net8.0\BML_Play.sourcelink.json

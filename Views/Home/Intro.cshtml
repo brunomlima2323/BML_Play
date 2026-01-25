@@ -1,0 +1,152 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>BML Intro</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: black;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .scene {
+            animation: cameraZoom 4.5s ease forwards;
+        }
+
+        svg {
+            width: 600px;
+        }
+
+        .outline {
+            fill: none;
+            stroke: #ff2a2a;
+            stroke-width: 10;
+            stroke-dasharray: 1200;
+            stroke-dashoffset: 1200;
+
+            filter:
+                drop-shadow(0 0 10px #ff2a2a)
+                drop-shadow(0 0 25px #b00000);
+
+            animation:
+                draw 2.3s ease forwards,
+                energyPulse 0.15s infinite;
+        }
+
+        .fill {
+            fill: #b00000;
+            opacity: 0;
+
+            filter:
+                drop-shadow(0 0 15px #ff0000)
+                drop-shadow(0 0 35px #b00000);
+
+            animation: fillIn 0.8s ease forwards;
+            animation-delay: 2.4s;
+        }
+
+        @@keyframes draw { to { stroke-dashoffset: 0; } }
+        @@keyframes fillIn { to { opacity: 1; } }
+
+        @@keyframes energyPulse {
+            0% { filter: brightness(1); }
+            50% { filter: brightness(1.8); }
+            100% { filter: brightness(1); }
+        }
+
+        @@keyframes cameraZoom {
+            0% { transform: scale(1.6); opacity: 0; }
+            30% { opacity: 1; }
+            100% { transform: scale(1); }
+        }
+
+        .fade {
+            position: fixed;
+            inset: 0;
+            background: black;
+            opacity: 0;
+            animation: fadeOut 1.5s ease forwards;
+            animation-delay: 4.5s;
+        }
+
+        @@keyframes fadeOut {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio id="tudum" src="@Url.Content("~/audio/tudum.mp3")"></audio>
+
+    <div class="scene">
+
+        <svg viewBox="0 0 800 300">
+            <text x="50" y="220"
+                  font-size="220"
+                  font-family="Arial Black"
+                  class="outline">
+                BML
+            </text>
+
+            <text x="50" y="220"
+                  font-size="220"
+                  font-family="Arial Black"
+                  class="fill">
+                BML
+            </text>
+        </svg>
+
+    </div>
+
+    <div class="fade"></div>
+
+    <script>
+    const audio = document.getElementById("tudum");
+    let audioLiberado = false;
+
+    // força o carregamento do áudio
+    audio.load();
+
+    function tocarSom() {
+        if (audioLiberado) return;
+
+        audioLiberado = true;
+
+        audio.play().catch(err => {
+            console.log("Som bloqueado:", err);
+        });
+    }
+
+    // quando o áudio estiver pronto
+    audio.addEventListener("canplaythrough", () => {
+
+        document.addEventListener("click", tocarSom);
+        document.addEventListener("keydown", tocarSom);
+        document.addEventListener("touchstart", tocarSom);
+
+    });
+
+    // redireciona após a intro
+    setTimeout(() => {
+        window.location.href = '@Url.Action("Index", "Home")';
+    }, 6000);
+    </script>
+
+</body>
+</html>

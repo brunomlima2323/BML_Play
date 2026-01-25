@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dcsOJ56wN3sV3/Cl7M+lwTcoq/yKAnC4gkY+S9+GXtU=",
+  "Hash": "EL3GUaqCd0G/efNeZ8v09hvws6+GH6Fme5KXyWlfisY=",
   "Source": "BML_Play",
   "BasePath": "_content/BML_Play",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Bruno Lima\\source\\repos\\BML_Play\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BML_Play.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Bruno Lima\\source\\repos\\BML_Play\\wwwroot\\audio\\tudum.mp3",
+      "SourceId": "BML_Play",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Bruno Lima\\source\\repos\\BML_Play\\wwwroot\\",
+      "BasePath": "_content/BML_Play",
+      "RelativePath": "audio/tudum.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\audio\\tudum.mp3"
     },
     {
       "Identity": "C:\\Users\\Bruno Lima\\source\\repos\\BML_Play\\wwwroot\\css\\site.css",
