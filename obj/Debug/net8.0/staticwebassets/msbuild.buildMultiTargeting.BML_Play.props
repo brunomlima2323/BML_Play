@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BML_Play.props" />
+</Project>
