@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using BML_Play.Models;
+using BML_Play.Models.ViewModels;
 
 namespace BML_Play.Controllers;
 

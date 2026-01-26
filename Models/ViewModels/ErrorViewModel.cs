@@ -1,4 +1,4 @@
-namespace BML_Play.Models;
+namespace BML_Play.Models.ViewModels;
 
 public class ErrorViewModel
 {
