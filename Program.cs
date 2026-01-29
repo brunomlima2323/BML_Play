@@ -15,7 +15,20 @@ builder.Services.AddDbContext<BML_PlayContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+
+builder.Services.AddControllersWithViews();
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<BML_PlayContext>();
+    db.Database.Migrate();
+}
+
+app.Run();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
