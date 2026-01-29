@@ -5,30 +5,15 @@ using System.Configuration;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<BML_PlayContext>(options =>
-    options.UseMySql(
-        builder.Configuration.GetConnectionString("BML_PlayContext"),
-        new MySqlServerVersion(new Version(9, 6, 0)),
-        b => b.MigrationsAssembly("BML_Play")
+    options.UseNpgsql(
+        builder.Configuration.GetConnectionString("BML_PlayContext")
     )
 );
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
-builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
-
-builder.Services.AddControllersWithViews();
-
 var app = builder.Build();
-
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<BML_PlayContext>();
-    db.Database.Migrate();
-}
-
-app.Run();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
