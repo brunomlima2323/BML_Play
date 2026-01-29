@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BML_Play")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47cb8253bb86b9d7a0e6806aea214ca3a4c3fd6b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e428bd038bc79cf02e4a4cb3202fbe1e882d494")]
 [assembly: System.Reflection.AssemblyProductAttribute("BML_Play")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BML_Play")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
