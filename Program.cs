@@ -1,4 +1,16 @@
+﻿using BML_Play.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System.Configuration;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<BML_PlayContext>(options =>
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("BML_PlayContext"),
+        new MySqlServerVersion(new Version(9, 6, 0)),
+        b => b.MigrationsAssembly("BML_Play")
+    )
+);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -22,6 +34,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Intro}/{id?}");
+    pattern: "{controller=Filmes}/{action=Intro}/{id?}");
 
 app.Run();

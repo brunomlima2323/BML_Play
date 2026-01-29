@@ -19,4 +19,124 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #000;
+  color: #fff;
+}
+
+
+
+.movie-row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+}
+
+.movie-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.movie-row::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.movie-card {
+    min-width: 180px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.08);
+    z-index: 10;
+}
+
+.movie-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.movie-info {
+    margin-top: 6px;
+    text-align: center;
+}
+
+.movie-info h6 {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.movie-details-container {
+    color: white;
+}
+
+/* banner topo */
+.movie-banner {
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.movie-overlay {
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.2)
+    );
+    height: 100%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-overlay h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.movie-meta {
+    font-size: 16px;
+    margin: 15px 0;
+    color: #ddd;
+}
+
+.movie-buttons {
+    margin-top: 20px;
+}
+
+/* descrição */
+.movie-description {
+    padding: 40px 60px;
+    max-width: 900px;
+}
+
+/* player */
+.movie-player {
+    padding: 0 60px 60px;
+}
+
+.movie-player iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 12px;
+}
+
+.netflix-navbar {
+    background-color: #fc2e42; /* vermelho Netflix */
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #ddd !important;
 }

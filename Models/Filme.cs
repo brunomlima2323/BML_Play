@@ -6,11 +6,11 @@ namespace BML_Play.Models
 
         public string Titulo { get; set; } = null!;
 
-        public string? Descricao { get; set; }
+        public string Descricao { get; set; } = null!;
 
         public int Ano { get; set; }
 
-        public int DuracaoMinutos { get; set; }
+        public string Duracao { get; set; } = null!;
 
         public string Genero { get; set; } = null!;
 

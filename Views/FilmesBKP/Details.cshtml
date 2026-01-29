@@ -1,0 +1,33 @@
+@model BML_Play.Models.Filme
+
+<div class="movie-details-container">
+
+    <!-- Banner -->
+    <div class="movie-banner"
+         style="background-image: url('@Model.UrlCapa')">
+
+        <div class="movie-overlay">
+            <h1>@Model.Titulo</h1>
+
+            <p class="movie-meta">
+                @Model.Ano • @Model.Duracao min • @Model.Genero
+            </p>
+        </div>
+    </div>
+
+    <!-- Descrição -->
+    <div class="movie-description">
+        <h4>Sinopse</h4>
+        <p>@Model.Descricao</p>
+    </div>
+
+    <!-- Player -->
+    <div id="player" class="movie-player">
+        <iframe
+            src="@Model.UrlVideo"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</div>

@@ -1,0 +1,26 @@
+@model IEnumerable<BML_Play.Models.Filme>
+
+<h2 class="mb-4">Filmes em destaque</h2>
+
+<div class="movie-row">
+    @foreach (var item in Model)
+    {
+        <div class="movie-card">
+            <img src="@item.UrlCapa" class="movie-img" alt="@item.Titulo">
+
+            <div class="movie-info">
+                <h6>@item.Titulo</h6>
+                <a asp-action="Details" asp-route-id="@item.Id"
+                   class="btn btn-sm btn-danger">
+                   Assistir
+                </a>
+            </div>
+        </div>
+    }
+</div>
+
+<h2 class="mb-4">Series em destaque</h2>
+
+<div class="movie-row">
+    <p>Funcionalidade em desenvolvimento</p>
+</div>
